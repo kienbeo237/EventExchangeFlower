@@ -1,0 +1,41 @@
+/* NewProducts.css */
+.newProducts {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .newProducts h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .productContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .productItem {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .productItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .productItem p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive cho màn hình nhỏ hơn */
+  @media only screen and (max-width: 650px) {
+    .productItem {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

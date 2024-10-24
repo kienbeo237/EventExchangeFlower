@@ -1,0 +1,124 @@
+.footer {
+  background-color: #f5f5f5;
+  padding: 20px 0;
+  text-align: center;
+  color: #333;
+  width: 100vw; /* Full width of the screen */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer-section {
+  flex-basis: 20%;
+  margin-bottom: 10px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  color: #9F484C; /* Flower-themed color */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.socialMedia svg {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #9F484C; /* Flower-themed color */
+  cursor: pointer;
+}
+
+.contact-us p {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  background-color: #9F484C; /* Flower-themed dark color */
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Ensure footer stays at the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1; /* Makes the content take available space */
+}
+
+.footer {
+  flex-shrink: 0; /* Footer stays at the bottom */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    flex-basis: 100%;
+  }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  text-align: center;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid #FFC0CB; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+}

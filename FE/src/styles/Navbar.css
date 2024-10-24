@@ -1,0 +1,345 @@
+/* Navbar container */
+.navbar {
+  position: fixed; /* Giữ navbar cố định */
+  top: 0;
+  width: 100%;
+  z-index: 9999; /* Đảm bảo navbar luôn trên cùng */
+  background-color: #fff; 
+  display: flex;
+  padding-bottom: 5px;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+}
+
+/* Đảm bảo có khoảng trống dưới navbar để nội dung không bị che */
+body {
+  padding-top: 80px; 
+}
+
+/* Left section with logo and brand name */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 110px;
+  height: auto;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9F484C;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #9F484C;
+}
+
+.activeLink {
+  color: #9F484C;
+  font-weight: bold;
+}
+
+.activeLink::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9F484C;
+  visibility: visible;
+}
+
+/* Right section with icons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* margin-right: 5px; */
+}
+
+.navbar-icon {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-icon:hover {
+  color: #9F484C;
+}
+
+.cart-count {
+  font-size: 14px;
+  color: white;
+  background-color: #9F484C;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 4px;
+}
+
+.cart-icon-wrapper {
+  position: relative;
+}
+
+.navbar-icon {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/*Search bar*/
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-bar-nav {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.search-bar-nav:focus {
+  border-color: #FFC0CB; /* Đổi màu viền khi focus */
+  box-shadow: 0 0 5px #FFC0CB; /* Ánh sáng khi focus */
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Đảm bảo kết quả hiển thị lên trên */
+}
+
+.search-result-item {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.2s;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.search-result-item h4 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+.search-result-item p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+
+@media only screen and (max-width: 480px) {
+  /* Further adjustments for smaller mobile screens */
+  .navbar {
+    height: 50px;
+  }
+
+  .navbar-left .navbar-logo {
+    width: 70px;
+  }
+
+  .navbar-right .navbar-icon {
+    font-size: 20px;
+  }
+
+  .search-bar {
+    font-size: 12px;
+  }
+
+  .search-result-item {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .search-container {
+    right: 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 0 10px; /* Reduced padding for smaller screens */
+    height: 60px;
+    flex-direction: row;
+  }
+
+  .navbar-center {
+    display: none; /* Hide center links on mobile */
+  }
+
+  /* Left section logo */
+  .navbar-left .navbar-logo {
+    width: 80px;
+  }
+
+  /* Right section icons */
+  .navbar-right {
+    gap: 10px;
+    margin-right: 10px;
+  }
+
+  /* Collapsible menu for mobile */
+  .navbar-collapse {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    position: fixed;
+    top: 60px; /* Below the navbar */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-collapse.show {
+    display: flex; /* Show when activated */
+  }
+
+  .navbar-collapse .nav-link {
+    font-size: 18px; /* Slightly smaller font */
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Hamburger icon */
+  .navbar-hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Hide search results until activated */
+  .search-container {
+    top: 60px;
+    right: 10px;
+    width: calc(100% - 20px); /* Full-width for mobile */
+  }
+
+  .search-bar {
+    width: 100%; /* Take full width of screen */
+  }
+
+  .search-results {
+    width: 100%; /* Full width for search results */
+  }
+}
+
+/* Mobile hamburger menu toggle */
+.navbar-hamburger {
+  display: none; /* Hidden on larger screens */
+}
+
+/* Show hamburger icon on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar-hamburger {
+    display: block;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media only screen and (max-width: 480px) {
+  .navbar {
+    height: 50px;
+  }
+
+  .navbar-left .navbar-logo {
+    width: 70px;
+  }
+
+  .navbar-right .navbar-icon {
+    font-size: 20px;
+  }
+
+  .search-bar {
+    font-size: 12px;
+  }
+
+  .search-result-item {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .search-container {
+    right: 5px;
+  }
+}
+
+
+
+
+

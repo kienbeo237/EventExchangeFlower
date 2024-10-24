@@ -1,0 +1,64 @@
+/* Success Page Styling */
+.success-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f9f9f9;
+  }
+  
+  .success-content {
+    text-align: center;
+
+    /* padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .success-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .success-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .success-icon {
+    margin-bottom: 20px;
+  }
+  
+  .success-icon img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .go-home-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .go-home-btn:hover {
+    background-color: #218838;
+  }
+  .green-icon {
+    fill: #28a745; /* Green color */
+  }
+  
+  .footer {
+    position: relative;  
+    width: 100vw;        
+    margin: 0;           
+    text-align: center;  
+  
+  }

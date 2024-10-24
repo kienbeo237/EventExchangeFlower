@@ -1,0 +1,245 @@
+/* General styling */
+.flower-detail-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.left-detail-flowerbatch {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-detail-flowerbatch .image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.left-detail-flowerbatch .image:hover {
+  transform: scale(1.05); /* Hover effect on image */
+}
+
+.bottom-img {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail.active {
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+.right-detail-flowerbatch {
+  flex: 1;
+}
+
+.right-detail-flowerbatch h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.flower-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.price {
+  color: #e63946;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.stock-availability {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.in-stock {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.star-rating .stars {
+  font-size: 18px;
+  color: #facc15; /* Bright yellow stars */
+}
+
+.flower-type-selection {
+  margin-top: 20px;
+}
+
+.flower-type-selection select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+.flower-type-selection select:hover {
+  border-color: #FFC0CB;
+}
+
+/* Container for buttons in the post detail */
+.button-container-post-detail {
+  margin-top: 200px; /* Tạo khoảng cách trên */
+  display: flex;
+  justify-content: center; /* Căn giữa các nút */
+  gap: 25px; /* Khoảng cách giữa các nút */ 
+ 
+  position: relative;
+}
+
+/* Common styles for both buttons */
+.buy-now-button-detail, .add-cart-button-detail {
+  padding: 15px 40px; /* Tăng kích thước để tạo cảm giác nút lớn và dễ bấm hơn */
+  border: none;
+  border-radius: 8px;
+  font-size: 18px; /* Font chữ lớn hơn tạo điểm nhấn */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ giúp nút nổi bật */
+  font-weight: 600; /* Font chữ đậm hơn */
+}
+
+/* Styles for the "Mua Ngay" button */
+.buy-now-button-detail {
+  background-color: #ff6b6b; /* Màu đỏ tươi tạo sự nổi bật */
+  color: #fff;
+}
+
+.buy-now-button-detail:hover {
+  background-color: #e04848; /* Màu đậm hơn khi hover */
+  transform: translateY(-4px); /* Hiệu ứng nâng nút khi hover */
+}
+
+/* Styles for the "Thêm vào giỏ hàng" button */
+.add-cart-button-detail {
+  background-color: #34d399; /* Màu xanh lá tươi sáng */
+  color: #fff;
+}
+
+.add-cart-button-detail:hover {
+  background-color: #10b981; /* Màu xanh đậm hơn khi hover */
+  transform: translateY(-4px); /* Hiệu ứng nâng nút khi hover */
+}
+
+/* Responsive design: Adjust button sizes on smaller screens */
+@media (max-width: 768px) {
+  .buy-now-button-detail, .add-cart-button-detail {
+    padding: 12px 30px; /* Giảm kích thước nút trên màn hình nhỏ */
+    font-size: 16px; /* Font nhỏ hơn cho thiết bị di động */
+  }
+
+  .button-container-post-detail {
+    gap: 15px; /* Giảm khoảng cách giữa các nút trên màn hình nhỏ */
+  }
+}
+
+
+
+
+
+
+
+/* Feedback Section */
+.feedback-section {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Related Posts Section */
+.related-posts-section {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f1f5f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+/* .footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+
+.footer a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #2563eb;
+} */
+
+.pagination-controls {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.pagination-controls button {
+  padding: 10px 20px;
+  background-color: #FFC0CB;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #FFC0CB;
+  transform: translateY(-2px);
+}
+
+.pagination-controls button:disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pagination-controls span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}

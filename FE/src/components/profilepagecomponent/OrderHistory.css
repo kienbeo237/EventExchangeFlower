@@ -1,0 +1,19 @@
+.order-history {
+    padding: 20px;
+  }
+  
+  .order-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  
+  .order-item h3 {
+    font-size: 18px;
+  }
+  
+  .order-item-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  

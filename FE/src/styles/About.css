@@ -1,0 +1,244 @@
+/* About.css */
+.about {
+
+  margin: 0 auto;
+  /* padding: 40px 20px; */
+  background-color: white;
+}
+.about-header {
+  text-align: center;
+  padding: 60px 20px;
+  /* background: linear-gradient(to bottom right, #ffc0cb, #ff8a8a); */
+  color: #FFC0CB;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #34495e;
+}
+
+.about-header strong {
+  color: #FFC0CB;
+}
+.moving-text {
+  overflow: hidden; /* Ẩn phần nội dung tràn ra ngoài */
+  white-space: nowrap; /* Ngăn chặn xuống dòng */
+}
+
+.moving-text h1, .moving-text p {
+  display: inline-block; /* Đảm bảo chúng nằm trên một dòng */
+  position: relative; /* Để tạo hoạt ảnh */
+  animation: moveText 10s linear infinite; /* Tạo hoạt ảnh di chuyển liên tục */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%); /* Bắt đầu từ ngoài bên trái */
+  }
+  100% {
+    transform: translateX(100%); /* Kết thúc ngoài bên phải */
+  }
+}
+
+
+/* Banner Section */
+.about-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 1.4rem;
+}
+
+/* Cards Section */
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.about-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-icon {
+  font-size: 3rem;
+  color: #FFC0CB;
+  margin-bottom: 20px;
+}
+
+.about-card h2 {
+  font-size: 1.6rem;
+  color: #34495e;
+}
+
+.about-card p {
+  color: #7f8c8d;
+}
+
+/* Featured Section */
+.about-featured {
+  margin-bottom: 50px;
+}
+
+.featured-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.featured-banner img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.featured-text {
+  flex: 1;
+}
+
+.featured-text h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.featured-text p {
+  color: #7f8c8d;
+}
+
+.featured-text button {
+  padding: 10px 20px;
+  background-color: #FFC0CB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.featured-text button:hover {
+  background-color: #841e53;
+}
+
+/* Blog Section */
+.about-blog {
+  margin-bottom: 50px;
+}
+
+.blog-posts {
+  display: flex;
+  gap: 40px;
+}
+
+.blog-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card h3 {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+.blog-card p {
+  padding: 0 15px 15px;
+  color: #7f8c8d;
+}
+
+.blog-card button {
+  margin: 0 15px 15px;
+  padding: 10px 15px;
+  background-color: #FFC0CB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blog-card button:hover {
+  background-color: #FFC0CB;
+}
+
+/* Testimonials Section */
+.about-testimonials {
+  margin-bottom: 50px;
+}
+
+.testimonial {
+  text-align: center;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #34495e;
+}
+.footer{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+
+}
